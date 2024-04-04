@@ -9,7 +9,7 @@ public class enshuu2_3 {
 		Scanner stdIn = new Scanner(System.in);
 		
 		System.out.print("xの値：");//xの値の入力を促す。
-		int x = stdIn.nextInt();・//xに実数値を読み込む。
+		int x = stdIn.nextInt();//xに実数値を読み込む。
 		
 		System.out.println(x + "と入力しましたね。");
 		//キーボードから入力した整数をそのまま反復して幼児するプログラム。
