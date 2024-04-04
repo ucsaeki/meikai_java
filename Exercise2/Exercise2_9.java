@@ -17,7 +17,6 @@ public class Exercise2_9 {
 	 * 作成日 2024/04/04
 	 */
 	public static void main(String[] args) {
-		// TODO 自動生成されたメソッド・スタブ
 		//randomNumberに変数を設定。
 		Random randomNumber = new Random();
 		
@@ -25,15 +24,15 @@ public class Exercise2_9 {
 		double firstRandom = randomNumber.nextDouble(1.0);
 		//secondRandomは0～10.0未満の乱数。
 		double secondRandom = randomNumber.nextDouble(10.0);
-		//thirdRandomは0～2.0未満の乱数。
-		double thirdRandom = randomNumber.nextDouble(2.0);
+		//thirdRandomは-1.0～1.0未満の乱数を表示するため、0～2.0未満の乱数-1の値を設定。
+		double thirdRandom = randomNumber.nextDouble(2.0) -1;
 		
 		//0以上1.0未満の乱数を表示。
 		System.out.println( firstRandom );
 		//0以上10.0未満の乱数を表示。
 		System.out.println( secondRandom );
-		//-1.0以上1.0未満の乱数を表示するため、0.0～2.0までの変数-1をした値を表示。
-		System.out.println( thirdRandom - 1.0 );
+		//-1.0以上1.0未満の乱数を表示。
+		System.out.println( thirdRandom  );
 	}
 
 }

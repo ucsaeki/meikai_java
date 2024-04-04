@@ -16,7 +16,6 @@ public class Exercise2_1 {
 	 * 作成日 2024/04/04
 	 */
 	public static void main(String[] args) {
-		// TODO 自動生成されたメソッド・スタブ
 		//変数xは問題文指定。xに初期値0を設定。
 		int x = 0;
 		//変数yは問題文指定。yに初期値0を設定。
@@ -30,13 +29,13 @@ public class Exercise2_1 {
 		//以下、代入失敗によりエラー表示。
 		
 		//xの値を画面に表示するプログラム。
-		System.out.println("xの値は"+x+"です。");
+		System.out.println("xの値は" + x + "です。");
 		//yの値を画面に表示するプログラム。
-		System.out.println("yの値は"+y+"です。");
+		System.out.println("yの値は" + y + "です。");
 		//xとyの合計を画面に表示するプログラム。
-		System.out.println("合計は"+(x+y)+"です。");
+		System.out.println("合計は" + ( x + y ) + "です。");
 		//xとyの平均を画面に表示するプログラム。
-		System.out.println("平均は"+(x+y)/2+"です。");
+		System.out.println("平均は" + ( x + y ) / 2 + "です。");
 		
 	}
 

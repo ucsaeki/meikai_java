@@ -17,7 +17,6 @@ public class Exercise2_10 {
 	 * 作成日 2024/04/04
 	 */
 	public static void main(String[] args) {
-		// TODO 自動生成されたメソッド・スタブ
 		//Scannerクラスに変数を設定。
 		Scanner standerdImput = new Scanner(System.in);
 		
