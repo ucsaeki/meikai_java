@@ -24,16 +24,16 @@ public class Exercise2_7 {
 		//final変数RANDOM_RANGE_TENに10、RANDOM_RANGE_NINETYに90を設定して確定。
 		final int RANDOM_TEN = 10,RANDOM_NINETY = 90;
 		
-		//randomTenに0～9の乱数を設定
+		//randomNineに0～9の乱数を設定
 		int randomNine = randomNumber.nextInt( RANDOM_TEN );
 		//randomNinetyに0～89の乱数を設定。
 		int randomNinety = randomNumber.nextInt( RANDOM_NINETY );
 		
 		//0～9の乱数を表示。
 		System.out.println( randomNine );
-		//randomTenに-1をかけて-9～0の乱数を表示。
+		//-9～0の乱数を表示するため、0～9の乱数に-1をかける。
 		System.out.println( randomNine  * -1 );
-		//randomNinetyに10を足して10～99の乱数を表示。
+		//10～99の乱数を表示するため、0から89までの乱数に10を足す。
 		System.out.println( randomNinety + 10 );
 
 	}

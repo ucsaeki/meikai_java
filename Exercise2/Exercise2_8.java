@@ -28,15 +28,15 @@ public class Exercise2_8 {
 		//NUMBER_ELEVENに11を設定して確定。
 		final int NUMBER_ELEVEN = 11;
 		
-		//xは0～11の乱数
+		//変数に0～11の乱数を設定。
 		int randomEleven = randomNumber.nextInt(NUMBER_ELEVEN);
 		
 		//整数値の入力を促す。
 		System.out.print("整数値:");
-		//yに実数値を読み込む。
+		//入力を読み込む。
 		int firstValiable = standerdInput.nextInt();
 		
-		//入力された値-5に0～10の乱数を足すことで入力値±5の値を表示。
+		//入力値±5の値を表示するため、入力された値-5に0～10の乱数を足す。
 		System.out.println("その値の±5の乱数を生成しました。"
 				+ "それは" + ( firstValiable + ( randomEleven - 5 )) +  "です。");
 	}

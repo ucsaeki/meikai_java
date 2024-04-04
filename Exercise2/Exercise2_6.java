@@ -21,17 +21,17 @@ public class Exercise2_6 {
 		//Scannerクラスに変数を設定。
 		Scanner standerdInput = new Scanner(System.in);
 			
-		//xの値の入力を促す。
+		//底辺の値の入力を促す。
 	    System.out.print("底辺：");
-	    //xに実数値を読み込む。
+	    //実数値を読み込む。
 		double bottomLength = standerdInput.nextDouble();
 		
-		//xの値の入力を促す。
+		//高さの値の入力を促す。
 		System.out.print("高さ：");
-		//xに実数値を読み込む。
+		//実数値を読み込む。
 		double heightLength = standerdInput.nextDouble();
 		
-		//三角形の面積を表示するため、bottomLength×heightLength÷2をした値を表示。
+		//三角形の面積を表示するため、底辺×高さ÷2をした値を表示。
 		System.out.println("面積は" + ( bottomLength * heightLength) / 2  + "です。");
 	}
 

@@ -24,12 +24,12 @@ public class Exercise2_4 {
 		
 		//整数値の入力を促す。
 		System.out.print("整数値：");
-		//firstVariableに入力された値を読み込む。
+		//入力された値を読み込む。
 		int firstVariable = standerdInput.nextInt();
 		
-		//firstVariable+10の値を表示。
+		//入力値+10の値を表示。
 		System.out.println("10を加えた値は" + ( firstVariable + 10) + "です。");
-		//firstVariable-10の値を表示。
+		//入力値-10の値を表示。
 		System.out.println("10を減じた値は" + ( firstVariable - 10) + "です。");
 	}
 

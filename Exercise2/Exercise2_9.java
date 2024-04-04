@@ -32,7 +32,7 @@ public class Exercise2_9 {
 		System.out.println( firstRandom );
 		//0以上10.0未満の乱数を表示。
 		System.out.println( secondRandom );
-		//-1.0以上1.0未満の乱数を表示するため、thirdRandom-1をした値を表示。
+		//-1.0以上1.0未満の乱数を表示するため、0.0～2.0までの変数-1をした値を表示。
 		System.out.println( thirdRandom - 1.0 );
 	}
 

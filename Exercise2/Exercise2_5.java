@@ -33,7 +33,7 @@ public class Exercise2_5 {
 		
 		//xとyの合計を表示するため、xとyを足す。
 		System.out.println("合計は" + ( x + y ) + "です。");
-		//xとyの平均を表示するため、合計を2で割る。
+		//xとyの平均を表示するため、xとyの合計を2で割る。
 		System.out.println("平均は" + ( x + y ) / 2 + "です。");
 	
 
