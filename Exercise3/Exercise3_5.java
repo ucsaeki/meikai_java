@@ -2,7 +2,7 @@ package Exercise3;
 //Scannerクラスをインポート。
 import java.util.Scanner;
 /* 
- * クラス名 
+ * クラス名 Exercise3_5
  * 概要 読み込んだ正の整数を5で割り切れるか判断するメソッド。
  * 作成者 Y.Saeki
  * 作成日 2024/04/05

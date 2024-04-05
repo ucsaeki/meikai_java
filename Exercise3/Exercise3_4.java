@@ -2,22 +2,21 @@ package Exercise3;
 //Scannerクラスをインポート。
 import java.util.Scanner;
 /* 
- * クラス名 
- * 概要 
+ * クラス名 Exercise3_4
+ * 概要 入力したaとbの大小関係を表示するメソッド。
  * 作成者 Y.Saeki
  * 作成日 2024/04/04
  */
 public class Exercise3_4 {
 	/* 
 	 * 関数名  main
-	 * 概要 
+	 * 概要 入力したaとbの大小関係を表示するメソッド。
 	 * 引数 なし
 	 * 返り値 なし
 	 * 作成者 Y.Saeki
 	 * 作成日 2024/04/04
 	 */
 	public static void main(String[] args) {
-		// TODO 自動生成されたメソッド・スタブ
 		//Scannerクラスに変数を設定。
 		Scanner standerdInput = new Scanner(System.in);
 		
