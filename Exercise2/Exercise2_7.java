@@ -20,7 +20,7 @@ public class Exercise2_7 {
 		//Randomクラスに変数を設定。
 		Random randomNumber = new Random();
 		
-		//final変数RANDOM_RANGE_TENに10、RANDOM_RANGE_NINETYに90を設定して確定。
+		//final変数RANDOM_TENに10、RANDOM_NINETYに90を設定して確定。
 		final int RANDOM_TEN = 10,RANDOM_NINETY = 90;
 		
 		//変数に0～9の乱数を設定。
