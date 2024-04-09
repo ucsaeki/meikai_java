@@ -1,0 +1,21 @@
+package Chap4;
+
+import java.util.Scanner;
+
+public class FingerFlashung {
+
+	public static void main(String[] args) {
+		Scanner standerdInput = new Scanner(System.in);
+		
+		int hundNumber = 0;
+		
+		do {
+			System.out.print("手を選べ ( 0…グー/1…チョキ/2…パー） : ");
+			hundNumber = standerdInput.nextInt();
+			
+					
+		} while ( hand < 0 || hand > 2)
+
+	}
+
+}

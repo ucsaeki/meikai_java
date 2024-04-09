@@ -19,10 +19,11 @@ public class Exercise3_17 {
 	public static void main(String[] args) {
 		//Randomクラスに変数を設定。
 		Random randomNumber = new Random();
-		//変数に0～2のランダムな数字を代入。
-		int randomThree = randomNumber.nextInt(3);
-		//生成した乱数を表示。
-		System.out.println(randomThree);
+		//0～2までの3つの数字を指定するため、定数3を設定。
+		final int CONSTANT_THREE = 3;
+		
+		//変数に0～2までのランダムな数字を代入。
+		int randomThree = randomNumber.nextInt(CONSTANT_THREE);
 		
 		//変数によって分岐。
 		switch ( randomThree ) {

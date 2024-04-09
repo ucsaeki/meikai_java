@@ -26,17 +26,18 @@ public class Exercise3_3 {
 		int n = standerdInput.nextInt();
 		
 		//もし変数が0より大きい場合。
-		if ( n > 0 )
+		if ( n > 0 ) {
 			//入力値が正であることを表示。
 			System.out.println("その値は正です");
 		//変数が0より大きくなく、0より小さい場合。
-		else if ( n < 0 )
+		} else if ( n < 0 ) {
 			//入力値が負であることを表示。
 			System.out.println("その値は負です");
 		//変数が0と同じとき。
 		//List3-5の最後尾のelseをelse if ( n == 0 )に変更したとしても、変更前と同様の挙動を示す。
-		else if ( n == 0 )
+		} else if ( n == 0 ) {
 			System.out.println("その値は0です");
+		}
 	
 	}
 

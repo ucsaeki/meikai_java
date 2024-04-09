@@ -1,6 +1,8 @@
 package Exercise3;
+
 //Scannerクラスをインポート。
 import java.util.Scanner;
+
 /* 
  * クラス名 Exercise3_9
  * 概要 入力された二つの実数値の大きいほうの値を表示するメソッド。
@@ -19,20 +21,19 @@ public class Exercise3_9 {
 	public static void main(String[] args) {
 		//Scannerクラスに変数を設定。
 		Scanner standerdInput = new Scanner(System.in);
-		
+
 		//実数の入力を促す。
-		System.out.print("実数：");
+		System.out.print("実数1：");
 		//入力を読み込む。
-		int firstNumber = standerdInput.nextInt();
+		double firstNumber = standerdInput.nextDouble();
 		//実数の入力を促す。
-		System.out.print("実数：");
+		System.out.print("実数2：");
 		//入力を読み込む。
-		int secondNumber = standerdInput.nextInt();
-		
+		double secondNumber = standerdInput.nextDouble();
+
 		//大きいほうの変数を表示する
-		System.out.println("大きいほうの値は" 
-		+ ( firstNumber > secondNumber ? firstNumber : secondNumber) + "です。");
-		
+		System.out.println("大きいほうの値は"
+		+ (firstNumber > secondNumber ? firstNumber : secondNumber) + "です。");
 
 	}
 

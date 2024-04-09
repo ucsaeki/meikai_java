@@ -2,7 +2,7 @@ package Exercise3;
 //Scannerクラスをインポート。
 import java.util.Scanner;
 /* 
- * クラス名 
+ * クラス名 Exercise3_16
  * 概要 入力した三つの整数を昇順にソートするメソッド。
  * 作成者 Y.Saeki
  * 作成日 2024/04/05
@@ -37,11 +37,11 @@ public class Exercise3_16 {
 		//変数に最初に入力した値を代入。
 		maxmumNumber = firstNumber;
 		//二番目に入力した値が変数より大きいとき
-		if ( secondNumber > maxmumNumber ) 
+		if ( secondNumber > maxmumNumber ) {
 			//変数に二番目に入力した値を代入。
 			maxmumNumber = secondNumber;
 		//三番目に入力した値が変数より大きいとき
-		if ( thirdNumber > maxmumNumber ) {
+		}if ( thirdNumber > maxmumNumber ) {
 			//変数に三番目に入力した値を代入。
 			maxmumNumber = thirdNumber;
 			//二つの変数を比較して大きいほうを中央値として代入。
@@ -60,9 +60,9 @@ public class Exercise3_16 {
 			midiumNumber =  ( secondNumber > thirdNumber ? secondNumber : thirdNumber );
 			//二つの変数を比較して小さいほうを最小値として代入。
 			minimumNumber =  ( secondNumber > thirdNumber ? thirdNumber : secondNumber );
-			
+		}
 		//文章を表示。
-		}System.out.println("小さい順にソートしました");
+		System.out.println("小さい順にソートしました");
 		//文章を表示。
 		System.out.println( minimumNumber );
 		//文章を表示。

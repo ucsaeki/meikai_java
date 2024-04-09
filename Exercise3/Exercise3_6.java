@@ -24,19 +24,20 @@ public class Exercise3_6 {
 		//入力を読み込む。
 		int integerNumber = standerdInput.nextInt();
 		//変数が0より大きい場合。
-		if ( integerNumber > 0 )
+		if ( integerNumber > 0 ) {
 			//変数÷10が0の場合
-			if ( integerNumber % 10 == 0)
+			if ( integerNumber % 10 == 0) {
 				//10の倍数であることを表示。
 				System.out.println("その値は10の倍数です。");
 			//0でない場合
-			else
+			} else {
 				//10の倍数でないことを表示。
 				System.out.println("その値は10の倍数ではありません。");
 		//そうでない場合
-		else
+		}}else {
 			//変数が正でないことを表示。
 			System.out.println("正でない値が入力されました。");
+		}
 
 	}
 

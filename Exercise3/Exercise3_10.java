@@ -23,15 +23,15 @@ public class Exercise3_10 {
 		//実数の入力を促す。
 		System.out.print("実数1:");
 		//入力を読み込む。
-		int firstReal = standerdInput.nextInt();
+		int firstNumber = standerdInput.nextInt();
 		//実数の入力を促す。
 		System.out.print("実数2");
 		//入力を読み込む。
-		int secondReal = standerdInput.nextInt();
+		int secondNumber = standerdInput.nextInt();
 		
 		//入力値の差を表示する。
 		System.out.println("それらの差は" 
-		+ ( firstReal > secondReal ? firstReal - secondReal : secondReal - firstReal ) + "です。");
+		+ ( firstNumber > secondNumber ? firstNumber - secondNumber : secondNumber - firstNumber ) + "です。");
 	
 
 	}

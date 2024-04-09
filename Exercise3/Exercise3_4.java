@@ -30,17 +30,18 @@ public class Exercise3_4 {
 		int b = standerdInput.nextInt();
 		
 		//もしaがbより大きい場合。
-		if ( a > b )
+		if ( a > b ) {
 			//文章を表示。
 			System.out.println("aのほうが大きいです。");
 		//bがaよりも大きい場合
-		else if ( a < b )
+		} else if ( a < b ) {
 			//文章を表示する
 			System.out.println("bのほうが大きいです。");
 		//それ以外の場合
-		else
+		} else {
 			//文章を表示
 			System.out.println("aとbは同じ値です。");
+		}
 	}
 
 }

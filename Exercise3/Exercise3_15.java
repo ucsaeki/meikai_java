@@ -10,7 +10,7 @@ import java.util.Scanner;
 public class Exercise3_15 {
 	/* 
 	 * 関数名  main
-	 * 概要 入力した二つtの整数値を降順にソートするメソッド。
+	 * 概要 入力した二つの整数値を降順にソートするメソッド。
 	 * 引数 なし
 	 * 返り値 なし
 	 * 作成者 Y.Saeki
@@ -36,8 +36,9 @@ public class Exercise3_15 {
 			firstNumber = secondNumber;
 			//変数に保存しておいた先に入力した変数を入力。
 			secondNumber = oneTimeStrage;
+		}
 		//文章を表示。
-		}System.out.println("1≧2となるようにソートしました。");
+		System.out.println("1≧2となるようにソートしました。");
 		//文章を表示。
 		System.out.println("整数1:" + firstNumber );
 		//文章を表示。

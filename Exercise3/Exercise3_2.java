@@ -29,18 +29,26 @@ public class Exercise3_2 {
 		//入力を読み込む。
 		int secondVariable = standerdInput.nextInt();
 		
-		//変数に整数A÷整数Bの値を設定。
-		int diviserVariable = firstVariabale / secondVariable;
-
-		//変数が0以上のとき
-		if ( diviserVariable >= 0 )
+		//約数が0の場合
+		if ( secondVariable == 0) {
+			//割られる数が0の場合
+			if ( firstVariabale ==0 ) {
+				//0は0の約数であることを表示。
+				System.out.println("BはAの約数です。");
+			//そうでない場合。
+			} else {
+				//0で割ることはできず、0は約数にならないことを表示。
+				System.out.println("0は約数になりません");
+			//A÷Bの余りが0の場合。
+			}} else if ( firstVariabale % secondVariable == 0 ) {
 			//BがAの約数であることを表示。
 			System.out.println("BはAの約数です。");
-		//そうでないとき。
-		else
-			//BがAの約数ではないことを表示。
+			//そうではない場合
+			} else {
+			//文章を表示。
 			System.out.println("BはAの約数ではありません。");
-
+			}
+		
 	}
 
 }

@@ -32,13 +32,14 @@ public class Exercise3_11 {
 		int minimumNumber = ( firstNumber > secondNumber ? firstNumber - secondNumber 
 		: secondNumber - firstNumber );
 		//変数が11以上の場合
-		if( minimumNumber >= 11 )
+		if( minimumNumber >= 11 ) {
 			//文章を表示
 			System.out.print("それらの差は11以上です。");
 		//そうでない場合
-		else
+		} else {
 			//文章を表示。
 			System.out.print("それらの差は10以下です。");
+		}
 	}
 
 }

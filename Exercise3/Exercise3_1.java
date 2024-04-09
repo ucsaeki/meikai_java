@@ -30,9 +30,10 @@ public class Exercise3_1 {
 			//絶対値を表示する。
 			System.out.println("その絶対値は" + valiableNumber + "です。");
 		//そうでない場合。
-		}else
+		}else {
 			//負の値を正の値に変換して絶対値を表示するため、変数に-1をかける。
 			System.out.println("その絶対値は" + valiableNumber * -1 + "です。");
+		}
 	}
 
 }

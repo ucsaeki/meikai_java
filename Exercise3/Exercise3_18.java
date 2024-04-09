@@ -24,16 +24,48 @@ public class Exercise3_18 {
 		//入力を読み込む。
 		int variableMonth = standerdInput.nextInt();
 
-		//変数によって分岐。
-		switch ( variableMonth ) {
-		//変数が1、2、3のとき、冬を表示して分岐を終了。
-		case 1 : case 2 : case 3 : System.out.println("冬"); break;
-		//変数が4、5、6のとき、春を表示して分岐を終了。
-		case 4 : case 5 : case 6 : System.out.println("春"); break;
-		//変数が7、8、9のとき、夏を表示して分岐を終了。
-		case 7 : case 8 : case 9 : System.out.println("夏"); break;
-		//変数が10、11、12のとき、秋を表示して分岐を終了。
-		case 10 :case 11 : case 12 : System.out.println("秋"); break;
+		//nが1以上12以下の場合
+		if ( variableMonth >= 1 && variableMonth <= 12 ) {
+
+			//変数によって分岐。
+			switch ( variableMonth ) {
+			//変数が3の場合
+			case 3 :
+			//変数が3の場合
+			case 4 : 
+			//変数が5の場合、文章を表示。
+			case 5 : System.out.println("春");
+			//分岐を終了。
+			break;
+			//変数が6の場合
+			case 6 :
+			//変数が7の場合
+			case 7 :
+			//変数が8の場合、文章を表示。
+			case 8 : System.out.println("夏");
+			//分岐を終了。
+			break;
+			//変数が9の場合
+			case 9 :
+			//変数が10の場合
+			case 10 : 
+			//変数が11の場合、文章を表示。
+			case 11 : System.out.println("秋");
+			//分岐を終了。
+			break;
+			//変数が1の場合
+			case 1:
+			//変数が2の場合
+			case 2 : 
+			//変数が12の場合、文章を表示。
+			case 12 : System.out.println("冬");
+			//分岐を終了。
+			break;
+			}
+		//そうでない場合
+		} else {
+			//文章を表示。
+			System.out.println("正しい月を入力してください");
 		}
 
 	}
