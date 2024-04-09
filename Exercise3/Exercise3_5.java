@@ -2,7 +2,7 @@ package Exercise3;
 //Scannerクラスをインポート。
 import java.util.Scanner;
 /* 
- * クラス名 
+ * クラス名 Exercise3_5
  * 概要 読み込んだ正の整数を5で割り切れるか判断するメソッド。
  * 作成者 Y.Saeki
  * 作成日 2024/04/05
@@ -26,19 +26,20 @@ public class Exercise3_5 {
 		int integlerNumber = standerdInput.nextInt();
 		
 		//もし変数が0以上の場合
-		if ( integlerNumber > 0 )
+		if ( integlerNumber > 0 ) {
 			//変数÷5が0の場合
-			if ( integlerNumber % 5 == 0)
+			if ( integlerNumber % 5 == 0) {
 				//文章を表示。
 				System.out.println("その値は5で割り切れます。");
 			//それ以外の場合
-			else
+			} else {
 				//文章を表示。
 				System.out.println("その値は5で割り切れません。");
 		//それ以外の場合
-		 else
+		}} else {
 			//文章を表示
 			System.out.println("正でない値が入力されました。");
+		}
 
 	}
 
