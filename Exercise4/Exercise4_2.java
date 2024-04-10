@@ -41,14 +41,14 @@ public class Exercise4_2 {
 			hitNumber = standerdInput.nextInt();
 			//繰り返し
 			do {
-				//変数が9より小さく100より大きい場合
-				if (hitNumber < 9 || hitNumber > 100) {
+				//変数が10より小さく99より大きい場合
+				if (hitNumber < 10 || hitNumber > 99) {
 					//正しい入力を促す。
 					System.out.println("10～99で入力してください。：");
 					//入力を読み込む。
 					hitNumber = standerdInput.nextInt();
-			//変数が9より小さく100より大きい場合繰り返す。
-			}}while (hitNumber < 9 || hitNumber > 100);
+			//変数が10より小さく99より大きい場合繰り返す。
+			}}while (hitNumber < 10 || hitNumber > 99);  ////
 			//変数が乱数より大きい場合
 			if (hitNumber > randomHundred) {
 				//文章を表示。

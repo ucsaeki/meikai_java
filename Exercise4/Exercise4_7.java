@@ -27,8 +27,10 @@ public class Exercise4_7 {
 		int variableNumber = standerdInput.nextInt();
 		//変数に初期値0を入力。
 		int incremaentNumber = 0;
-
+		
+		//繰り返し
 		do {
+			//入力した値が0以上の場合
 			if (variableNumber <= 0) {
 				//正の値の入力を促す
 				System.out.println("正の値を入力してください。\n何個表示しますか:");
@@ -38,6 +40,9 @@ public class Exercise4_7 {
 			//変数が0以下の場合繰り返す。
 		} while (variableNumber <= 0);
 
+		//計算に使用するための定数2と1を宣言。
+		final int PER_TWO = 2, REMINDER_ONE = 1;
+		
 		//変数が1の場合
 		if (variableNumber == 1) {
 			//文章を表示。
@@ -47,7 +52,7 @@ public class Exercise4_7 {
 			//変数が入力された値より小さい場合
 			while (incremaentNumber < variableNumber) {
 				//変数÷2の余りが1である場合
-				if (incremaentNumber % 2 == 1) {
+				if (incremaentNumber % PER_TWO == REMINDER_ONE) {
 					//文字を表示。
 					System.out.print('+');
 					//変数に1加算する。

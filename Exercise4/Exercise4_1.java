@@ -44,36 +44,27 @@ public class Exercise4_1 {
 				//0であることを表示。
 				System.out.println("その値は0です。");
 			}
-			//繰り返しの継続を確認する文章を表示。
-			System.out.print("もう一度入力しますか？　Yes…1／No…0:");
-			//入力を読み込む。
-			retryJudge = standerdInput.nextInt();
-			//変数が1ではない場合
-			if (retryJudge != 1) {
-				//繰り返し
-				do {
-					//変数が0の場合
+			do {
+				//繰り返しの継続を確認する文章を表示。
+				System.out.print("もう一度入力しますか？　Yes…1／No…0:");
+				//入力を読み込む。
+				retryJudge = standerdInput.nextInt();
+				//入力された値が1ではない場合
+				if (retryJudge != 1) {
+					//入力された値が0の場合
 					if (retryJudge == 0) {
 						//繰り返しを終了する。
 						break;
-						//そうではない場合
+						//そうでない場合
 					} else {
 						//繰り返しの継続を確認する文章を表示。
-						System.out.print("1か0で入力してください。"
-								+ "\nもう一度入力しますか？　Yes…1／No…0:");
-						//入力を読み込む。
-						retryJudge = standerdInput.nextInt();
-						//変数に1以外が入力されるまで繰り返す。
+						System.out.println("1か0で入力してください。");
 					}
-				} while (retryJudge != 1);
-				//変数に1が入力されたら繰り返す。
-			}
-		} while (retryJudge == 1);
-		//変数に0が入力された場合
-		if (retryJudge == 0) {
-			//終了の文章を表示。
-			System.out.println("終了します。");
-		}
+				}
+				//変数が0未満、もしくは1より大きい場合繰り返す。
+			} while (retryJudge < 0 || retryJudge > 1);
+			//変数が0以外の場合繰り返す
+		} while (retryJudge != 0);
 
 	}
 

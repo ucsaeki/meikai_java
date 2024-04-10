@@ -21,32 +21,36 @@ public class Exercise4_8 {
 	public static void main(String[] args) {
 		//Scannerクラスに変数を設定。
 		Scanner standerdInput = new Scanner(System.in);
-		//変数に初期値として0を設定。
+		//整数値を表す変数に初期値として0を設定。
 		int variableNumber = 0;
-		//変数に初期値として0を設定。
+		//計算で使用する変数に初期値として0を設定。
 		int incremaentNumber = 0;
 
-		//繰り返し
+		//正の整数値が入力されるまで繰り返し。
 		do {
 			//整数値の入力を促す。
 			System.out.print("整数値:");
-			//入力した値を読み込む。
+			//入力された値を読み込む。
 			variableNumber = standerdInput.nextInt();
-			//変数が0未満の場合
-			if ( variableNumber <= 0 )
-				//文章を表示
-				System.out.print("正の整数値を入力してください。");
-			//変数が0以下の場合繰り返す。
+			//入力された整数値が0以下の場合
+			if (variableNumber <= 0) {/////////////
+				//正の整数値の入力を促す文章を表示。
+				System.out.println("正の整数値を入力してください。");
+			}
+		//入力された整数値が0以下の場合繰り返す。
 		} while (variableNumber <= 0);
-		//変数が0より大きい場合繰り返す。
+
+		//整数値を10で割り桁を一つ小さくするための定数10を宣言。
+		final int CONSTANT_TEN = 10;
+		//正の整数値が0より大きい場合繰り返す。
 		while (variableNumber > 0) {
-			//桁を一つ小さくするために変数を10で割る。
-			variableNumber /= 10;
-			//変数に1加算。
+			//桁を一つ小さくするために整数値を10で割る。
+			variableNumber /= CONSTANT_TEN;
+			//桁数を表す変数に1加算。
 			incremaentNumber++;
 		}
 		//文章を表示。
-		System.out.println("その値は" + incremaentNumber + "です。");
+		System.out.println("その値は" + incremaentNumber + "桁です。");
 
 	}
 

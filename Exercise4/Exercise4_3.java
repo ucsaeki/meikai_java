@@ -33,6 +33,8 @@ public class Exercise4_3 {
 		int maximumNumber = (firstNumber > secondNumber ? firstNumber : secondNumber);
 		//二つの変数の小さいほうを新たな変数に設定。
 		int variableNumber = (firstNumber > secondNumber ? secondNumber : firstNumber);
+		//計算に使用するための定数1を宣言。
+		final int CONSTANT_ONE = 1;
 		//文章を表示。
 		System.out.print(variableNumber);
 		//繰り返し
@@ -40,7 +42,7 @@ public class Exercise4_3 {
 			//最大値と変数が異なる場合
 			if (maximumNumber != variableNumber) {
 				//文章を表示。
-				System.out.print(" " + (variableNumber + 1));
+				System.out.print(" " + (variableNumber + CONSTANT_ONE ));
 				//変数に変数+1を設定。
 				variableNumber = variableNumber + 1;
 				//最大値と変数が異なる場合繰り返す。
