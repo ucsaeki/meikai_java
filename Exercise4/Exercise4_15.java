@@ -7,7 +7,7 @@ import java.util.Scanner;
  * クラス名 Exercise4_15
  * 概要 身長と標準体重の対応表を表示する
  * 作成者 Y.Saeki
- * 作成日 2024/04/10
+ * 作成日 2024/04/11
  */
 public class Exercise4_15 {
 	/* 
@@ -16,39 +16,74 @@ public class Exercise4_15 {
 	 * 引数 なし
 	 * 返り値 なし
 	 * 作成者 Y.Saeki
-	 * 作成日 2024/04/10
+	 * 作成日 2024/04/11
 	 */
 	public static void main(String[] args) {
 		//Scannerクラスに変数を設定。
 		Scanner standerdInput = new Scanner(System.in);
 		//身長の最低値と最高値を表す変数に初期値0を代入。
-		int underHight = 0, overHight = 0;
+		int underHight = 0, overHight = 0, intervalVariable = 0;
 		//入力された整数値が0以下の場合繰り返し
 		for (; underHight <= 0;) {
 			//入力を促す。
 			System.out.print("何cmから：");
 			//入力を読み込む。
 			underHight = standerdInput.nextInt();
+			//入力値が0以下の場合
+			if (underHight <= 0) {
+				//正の整数値の入力を促す文章を表示。
+				System.out.print("正しく入力してください。");
+			}
 		}
-		//入力された整数値が0以下の場合繰り返し
-		for (; overHight <= 0;) {
+		//入力された整数値が0以下、または先に入力された値より小さい場合繰り返し
+		for (; overHight <= 0 || overHight <= underHight;) {
 			//入力を促す。
 			System.out.print("何cmまで：");
 			//入力を読み込む。
 			overHight = standerdInput.nextInt();
+			//整数値が0以下の場合
+			if (overHight <= 0) {
+				//正の整数値の入力を促す文章を表示。
+				System.out.print("正しく入力してください。");
+			} //後から入力した整数値が先に入力した整数値より小さい場合。
+			if (overHight <= underHight) {
+				//先に入力した身長より高い身長の入力を促す文章を表示。
+				System.out.print("先に入力した身長より高い身長を入力してください。");
+			}
+		} //入力された整数値が0以下の場合繰り返し
+		for (; intervalVariable <= 0;) {
+			//入力を促す文章を表示。
+			System.out.print("何cmごと：");
+			//入力を読み込む。
+			intervalVariable = standerdInput.nextInt();
+			//整数値が0以下の場合
+			if (intervalVariable <= 0) {
+				//正の整数値の入力を促す文章を表示。
+				System.out.print("正の整数値を入力してください。");
+			}
 		}
+
 		//文章を表示。
 		System.out.println("身長　標準体重");
-		
-		final int CONSTANT_FIVE = 5;
+		//計算に使用する定数に100、10、9をそれぞれ設定。
+		final int CONSTANT_HUNDRED = 100, CONSTANT_TEN = 10, CONSTANT_NINE = 9;
+		//計算に使用する定数に0.9を設定。
+		final double POINT_NINE = 0.9;
 		//入力された身長の最低値から最高値までの標準体重を計算
-		for (int i = underHight; i <= overHight;) {
-			//実数値の変数に身長を代入
-			double averageWeight = i;
-			//身長と標準体重を計算して表示。
-			System.out.println(i + "　" + (averageWeight - 100) * 0.9);
-			//身長に定数5を足して次のループへ。
-			i = i + CONSTANT_FIVE;
+		for (; underHight <= overHight;) {
+			//実数値の変数に平均体重を計算して代入
+			double perWeight = (underHight - CONSTANT_HUNDRED) * POINT_NINE;
+			//平均体重に小数点以下の数字が発生する場合
+			if (perWeight * CONSTANT_TEN % CONSTANT_TEN != 0) {
+				//身長と標準体重を表示。
+				System.out.println(underHight + "　 " + perWeight);
+				//平均体重に小数点以下の数字が発生しない場合
+			} else {
+				//定数を用いて身長と標準体重を計算して表示。
+				System.out.println(underHight + "　 " 
+				+ (underHight - CONSTANT_HUNDRED) * CONSTANT_NINE / CONSTANT_TEN);
+			} //身長に表示する幅の値を足して次のループへ。
+			underHight = underHight + intervalVariable;
 		}
 
 	}
