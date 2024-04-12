@@ -9,7 +9,7 @@ import java.util.Scanner;
  * 作成者 Y.Saeki
  * 作成日 2024/04/09
  */
-public class Exercise4_8 {
+public class Exercise4_08 {
 	/* 
 	 * 関数名  main
 	 * 概要 読み込んだ正の整数値の桁数を出力するメソッド。

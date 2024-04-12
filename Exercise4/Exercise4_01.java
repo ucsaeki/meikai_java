@@ -9,7 +9,7 @@ import java.util.Scanner;
  * 作成者 Y.Saeki
  * 作成日 2024/04/05
  */
-public class Exercise4_1 {
+public class Exercise4_01 {
 	/* 
 	 * 関数名  main
 	 * 概要 List3-5を好きなだけ何度も繰り返すことができるメソッド。

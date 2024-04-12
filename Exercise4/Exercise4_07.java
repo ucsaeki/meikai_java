@@ -9,7 +9,7 @@ import java.util.Scanner;
  * 作成者 Y.Saeki
  * 作成日 2024/04/09
  */
-public class Exercise4_7 {
+public class Exercise4_07 {
 	/* 
 	 * 関数名  main
 	 * 概要 読み込んだ値の個数だけ記号文字を出力するメソッド。

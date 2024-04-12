@@ -9,7 +9,7 @@ import java.util.Scanner;
  * 作成者 Y.Saeki
  * 作成日 2024/04/09
  */
-public class Exercise4_3 {
+public class Exercise4_03 {
 	/* 
 	 * 関数名  main
 	 * 概要 読み込んだ二つの整数値の小さい数以上大きい数以下の全整数を順番に表示させるメソッド。

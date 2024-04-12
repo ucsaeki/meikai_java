@@ -9,7 +9,7 @@ import java.util.Scanner;
  * 作成者 Y.Saeki
  * 作成日 2024/04/09
  */
-public class Exercise4_6_2 {
+public class Exercise4_06_02 {
 	/* 
 	 * 関数名  main
 	 * 概要 List4-8を読み込んだ値が1未満の場合改行文字を出力しないように書き換えたメソッド。

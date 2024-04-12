@@ -7,7 +7,7 @@ import java.util.Scanner;
  * 作成者 Y.Saeki
  * 作成日 2024/04/09
  */
-public class Exercise4_9 {
+public class Exercise4_09 {
 	/* 
 	 * 関数名  main
 	 * 概要 1から読み込んだ値までの積を求めるメソッド。

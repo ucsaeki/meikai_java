@@ -4,15 +4,15 @@ package Exercise4;
 import java.util.Scanner;
 
 /* 
- * クラス名 Exercise4_4
- * 概要 List4-4の終了時にxが-1であることを確認するメソッド。
+ * クラス名 Exercise4_5
+ * 概要 List4-5のx--が--xに変化した場合の出力を確認するテスト。
  * 作成者 Y.Saeki
  * 作成日 2024/04/09
  */
-public class Exercise4_4 {
+public class Exercise4_05 {
 	/* 
 	 * 関数名  main
-	 * 概要 List4-4の終了時にxが-1であることを確認するメソッド。
+	 * 概要 List4-5のx--が--xに変化した場合の出力を確認するテスト。
 	 * 引数 なし
 	 * 返り値 なし
 	 * 作成者 Y.Saeki
@@ -35,14 +35,11 @@ public class Exercise4_4 {
 		} while (x <= 0);
 		//変数が0以上の場合。
 		while (x >= 0) {
-			//文章を表示。
-			System.out.println(x);
-			//変数-1
-			x--;
+			//xの値を表示してデクリメントして改行する。
+			//前置減分演算子に変更したため、-1が行われた後の値が生成される。
+			//そのため、カウントダウンが入力値-1から始まり、終了時点の表示が０ではなく-1に変化した。
+			System.out.println(--x);
 		}
-		//繰り返し終了時のxの値を表示。x=-1になっていることが確認できる。
-		System.out.println("終了時のxは" + x + "です。");
-
 	}
 
 }

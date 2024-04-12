@@ -1,18 +1,18 @@
 package Exercise4;
-//Scannerクラスをインポート。
 
+//Scannerクラスをインポート。
 import java.util.Scanner;
 
 /* 
- * クラス名 Exercise4_22
- * 概要 入力した値の段数のピラミッドを表示する
+ * クラス名 Exercise4_23
+ * 概要 n段の数字ピラミッドを作成する
  * 作成者 Y.Saeki
  * 作成日 2024/04/12
  */
-public class Exercise4_22 {
+public class Exercise4_23 {
 	/* 
 	 * 関数名  main
-	 * 概要 入力した値の段数のピラミッドを表示する
+	 * 概要 n段の数字ピラミッドを作成する
 	 * 引数 なし
 	 * 返り値 なし
 	 * 作成者 Y.Saeki
@@ -50,18 +50,13 @@ public class Exercise4_22 {
 				System.out.print(' ');
 			} //段数に対応する順番の奇数の数だけ記号を表示する。
 			for (int k = 1; k <= i * CONSTANT_TWO - CONSTANT_ONE; k++) {
-				//記号を表示。
-				System.out.print('*');
-			} //段数に対応した個数の空白を表示する。
-			for (int m = decreaseDown - CONSTANT_ONE; m > 0; --m) {
-				//記号を表示。
-				System.out.print(' ');
+				//段数を表示
+				System.out.print(i % 10);
 			}
 			//改行する
 			System.out.println();
 			//残りの段数を1減少させる
 			decreaseDown--;
-
 		}
 
 	}
