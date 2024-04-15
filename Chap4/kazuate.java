@@ -1,6 +1,6 @@
-package Exercise4;
+package Chap4;
 
-public class Exercise4_2 {
+public class kazuate {
 
 	public static void main(String[] args) {
 		// TODO 自動生成されたメソッド・スタブ
