@@ -23,9 +23,9 @@ public class Exercise4_23 {
 		Scanner standerdInput = new Scanner(System.in);
 		//入力された値を表す変数を設定
 		int firstInteger = 0;
-		//段数に対して増加する記号の数を表した定数2を設定。
+		//段数に対して増加する記号の数を表した定数を設定。///
 		final int CONSTANT_TWO = 2;
-		//計算で使用する値である定数1を設定。
+		//計算で使用する値である定数を設定。////
 		final int CONSTANT_ONE = 1;
 
 		//正の整数値が入力されるまで警告と入力の催促を繰り返す。

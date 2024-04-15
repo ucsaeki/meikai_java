@@ -1,6 +1,8 @@
 package Exercise4;
+
 //Scannerクラスをインポート。
 import java.util.Scanner;
+
 /* 
  * クラス名 Exercise4_26
  * 概要 入力された値を負の値を除いて加算する
@@ -35,22 +37,21 @@ public class Exercise4_26 {
 				System.out.print("正の整数値を入力してください。");
 			}
 		}
-		
 		//合計を表す変数を設定
 		int firstSum = 0;
 		//負の数を含めて計算した回数を表す変数を設定
-		int timesNumberOne = 0;
+		int minusTimes = 0;
 		//正の数を加算した回数を表す変数を設定
-		int timesNumberTwo = 0;
-		
+		int plusTimes = 0;
+
 		//入力された値を既定の回数加算し続ける
-		for (; timesNumberOne < firstInteger; timesNumberOne++) {
+		for (; minusTimes < firstInteger; minusTimes++) {
 			//入力を促す文章を表示。
 			System.out.print("整数 :");
 			//入力を読み込む。
 			int firstVariable = standerdInput.nextInt();
 			//0未満の値が入力された場合
-			if (firstVariable  < 0) {
+			if (firstVariable < 0) {
 				//文章を表示。
 				System.out.println("負の数は加算しません");
 				//以後の処理を行わずに繰り返しを
@@ -59,12 +60,19 @@ public class Exercise4_26 {
 			//合計を表す変数に入力された値を加算して代入
 			firstSum += firstVariable;
 			//加算した回数を表す変数に1加算
-			timesNumberTwo++;
+			plusTimes++;
+		} //正の整数値を加算した回数が0の場合
+		if (plusTimes == 0) {
+			//エラー文章を表示。
+			System.out.println("全て負の数が入力されたため、計算できませんでした。");
+		//正の整数値を1回以上加算した場合
+		} else if (plusTimes >= 1) {
+			//合計を表示
+			System.out.println("合計は" + firstSum + "です。");
+			//平均を表示
+			System.out.println("平均は" + firstSum / plusTimes + "です。");
 		}
-		//合計を表示
-		System.out.println("合計は" + firstSum + "です。");
-		//平均を表示
-		System.out.println("平均は" + firstSum / timesNumberTwo + "です。");
+		
 	}
 
 }
