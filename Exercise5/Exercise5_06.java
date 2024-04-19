@@ -28,7 +28,7 @@ public class Exercise5_06 {
 		final int CONSTANT_THOUSAND = 1000;
 		//計算回数が1000回以上になるまで繰り返す
 
-		for (int i = 0; i <= 1000; i++) {
+		for (int i = 0; i <= CONSTANT_THOUSAND; i++) {
 			//変数を、全体を1桁、小数点以下を7桁で表示
 			System.out.printf("%1.7f", secondVariale);
 			//変数に0,001を加算した値を代入
@@ -38,7 +38,7 @@ public class Exercise5_06 {
 			//計算回数を1000で割った値を変数に設定
 			float secondVariable = (float) i / CONSTANT_THOUSAND;
 			//変数を、全体を8桁で表示
-			System.out.printf("%8f\n", secondVariable);
+			System.out.printf("%1.7f\n", secondVariable);
 
 		}
 	}

@@ -34,7 +34,7 @@ public class Exercise5_05 {
 		//入力を読み込む。
 		int thirdInteger = standerdInput.nextInt();
 		//3つの値の平均を実数値で求めるための定数を設定
-		final double CONSTANT_THREE = 3;
+		final int CONSTANT_THREE = 3;
 		//変数に三つの値の合計を設定
 		int totalNumber = firstInteger + secondInteger + thirdInteger;
 		//変数に三つの値の平均を実数値で設定
