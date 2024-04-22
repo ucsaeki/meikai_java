@@ -6,15 +6,15 @@ import java.util.Random;
 import java.util.Scanner;
 
 /* 
- * クラス名 Exercise6_14
- * 概要 月の英語表現を入力させる英単語学習ゲーム
+ * クラス名 Exercise6_15
+ * 概要 曜日を英語で入力させる
  * 作成者 Y.Saeki
  * 作成日 2024/04/19
  */
-public class Exercise6_14 {
+public class Exercise6_15 {
 	/* 
 	 * 関数名  main
-	 * 概要 月の英語表現を入力させる英単語学習ゲーム
+	 * 概要 曜日を英語で入力させる
 	 * 引数 なし
 	 * 返り値 なし
 	 * 作成者 Y.Saeki
@@ -25,42 +25,38 @@ public class Exercise6_14 {
 		Random randomRand = new Random();
 		//Scannerクラスに変数を設定。
 		Scanner standerdInput = new Scanner(System.in);
-		//1～12月の英語表記を順番に代入した配列を生成。
-		String[] englishMonth = { "January", "February", "March", "April", "May", "June", "July",
-				"August", "September", "October", "November", "December" };
-
-		//問題文を表示
-		System.out.println("英語の月名を入力してください。");
-		//問題の注意事項を表示
-		System.out.println("なお、先頭は大文字で、２文字目以降は小文字とします。");
-
-		//月の数を表す定数を設定
-		final int CONSTANT_TWELVE = 12;
-		//インデックスの値と入力された月の値のずれを修正するための定数を生成
-		final int PLUS_ONE_MONTH = 1;
+		//英語の曜日を表す配列を生成
+		String[] englishWeek = { "monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday" };
+		//日本語の曜日を表す配列を生成
+		String[] japaneseWeek = { "月", "火", "水", "木", "金", "土", "日" };
+		//曜日の数を表す定数を設定
+		final int WEEK_NUMBER = 7;
 		//繰り返す場合に選択する定数を設定
 		final int CONTINUE_GAME = 1;
 		//繰り返しの継続を判断するための変数を宣言し、初期値に継続状態を設定
 		int judgeContinue = CONTINUE_GAME;
 		//前回の繰り返しでの問題を保存するための変数に並列外の数値を設定
-		int lastQuestion = CONSTANT_TWELVE;
+		int lastQuestion = WEEK_NUMBER;
+
+		//問題文を表示
+		System.out.println("英語の曜日名を小文字で入力してください。");
+
 		//繰り返しが選択される限りゲームを継続する
 		outer: while (judgeContinue == CONTINUE_GAME) {
-			//正答となる月の値のインデックスをランダムに生成
-			int randomMonth = randomRand.nextInt(CONSTANT_TWELVE);
+			//配列内の曜日をランダムに表す乱数を設定
+			int randomWeek = randomRand.nextInt(WEEK_NUMBER);
 			//生成された問題が前回の問題と同じだった場合
-			if (randomMonth == lastQuestion) {
+			if (randomWeek == lastQuestion) {
 				//問題の生成を最初からやり直す
 				continue outer;
 			}
-			//正しい入力がされるまで継続
 			inner: while (true) {
-				//入力を促す文章を表示
-				System.out.print((randomMonth + PLUS_ONE_MONTH) + "月：");
-				//入力を読み込む
-				String answerMonth = standerdInput.next();
+				//ランダムな曜日を表示し回答を促す
+				System.out.print(japaneseWeek[randomWeek] + "曜日：");
+				//回答を読み込む
+				String answerWeek = standerdInput.next();
 				//入力された文字列が正しかった場合
-				if (answerMonth.equals(englishMonth[randomMonth])) {
+				if (answerWeek.equals(englishWeek[randomWeek])) {
 					//繰り返しを終了する
 					break inner;
 					//そうではない場合
@@ -77,9 +73,9 @@ public class Exercise6_14 {
 			System.out.print("もう一度？ 1…Yes／0…No：");
 			//入力を読み込む
 			judgeContinue = standerdInput.nextInt();
-			//今回の繰り返しでの問題を変数に保存しておく。			
-			lastQuestion = randomMonth;
-			//1か0を入力させる。
+			//前回の問題を変数に保存しておく
+			lastQuestion = randomWeek;
+			//1か0を入力させる
 			for (; judgeContinue > 1 || judgeContinue < 0;) {
 				//継続判断の変数に1か0を入力させる
 				if (judgeContinue > 1 || judgeContinue < 0) {
@@ -95,7 +91,7 @@ public class Exercise6_14 {
 					break;
 				}
 			}
-		}//ゲームの終了を表示
+		} //ゲームの終了を表示
 		System.out.println("終了しました。");
 	}
 
