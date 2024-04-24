@@ -42,11 +42,11 @@ public class Exercise6_14 {
 		final int CONTINUE_GAME = 1;
 		//繰り返しの継続を判断するための変数を宣言し、初期値に継続状態を設定
 		int judgeContinue = CONTINUE_GAME;
-		//前回の繰り返しでの問題を保存するための変数に並列外の数値を設定
+		//前回の繰り返しでの問題を保存するための変数に配列外の数値を設定
 		int lastQuestion = CONSTANT_TWELVE;
 		//繰り返しが選択される限りゲームを継続する
 		outer: while (judgeContinue == CONTINUE_GAME) {
-			//正答となる月の値のインデックスをランダムに生成
+			//正答となる月をランダムに生成
 			int randomMonth = randomRand.nextInt(CONSTANT_TWELVE);
 			//生成された問題が前回の問題と同じだった場合
 			if (randomMonth == lastQuestion) {

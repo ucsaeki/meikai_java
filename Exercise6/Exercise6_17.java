@@ -36,7 +36,7 @@ public class Exercise6_17 {
 		System.out.println("国語の点数を入力してください。");
 		//国語の点数を6人分入力させる
 		for (int i = 0; i < CONSTANT_SIX; i++) {
-			//入力を促す
+			//入力を促す//////
 			System.out.print((i + CONSTANT_ONE) + "人目：");
 			//入力を読み込む
 			japaneseArray[i] = standerdInput.nextInt();
@@ -51,8 +51,8 @@ public class Exercise6_17 {
 		System.out.println("数学の点数を入力してください。");
 		//国語の点数を6人分入力させる
 		for (int i = 0; i < CONSTANT_SIX; i++) {
-			//入力を促す
-			System.out.print((i + 1) + "人目：");
+			//入力を促す//////
+			System.out.print((i + CONSTANT_ONE) + "人目：");
 			//入力を読み込む
 			mathArray[i] = standerdInput.nextInt();
 			//入力された値が100より大きい、もしくは0より小さい場合
@@ -79,9 +79,9 @@ public class Exercise6_17 {
 			mathSum += mathArray[i];
 		}
 		//実数値で国語の平均点を求める
-		System.out.println("全体の国語の平均点は" + (double) (japaneseSum / CONSTANT_SIX) + "点です。");
+		System.out.println("全体の国語の平均点は" + ((double)japaneseSum / CONSTANT_SIX) + "点です。");
 		//実数値で数学の平均点を求める
-		System.out.println("全体の数学の平均点は" + (double) (mathSum / CONSTANT_SIX) + "点です。");
+		System.out.println("全体の数学の平均点は" + ((double)mathSum / CONSTANT_SIX) + "点です。");
 
 		//2で割る際に使用する定数を設定。
 		final double PER_TWE = 2.0;

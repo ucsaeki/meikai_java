@@ -68,6 +68,8 @@ public class Exercise6_16 {
 
 		//二つの行列の積を計算して表示する
 		for (int i = 0; i < CONSTANT_FOUR; i++) {
+			//行列をくくるための記号を表示
+			System.out.print("{");
 			//一つ目の行列の4行の要素を用いて計算
 			for (int j = 0; j < CONSTANT_FOUR; j++) {
 				//二つの行列のそれぞれ3列と3行の値に対応する要素を入力させる
@@ -79,7 +81,10 @@ public class Exercise6_16 {
 				System.out.printf("%4d", matrixSum);
 				//次のループでの計算に使用するため、行列の値を表す変数を0にリセットする。
 				matrixSum = 0;
-			} //改行する
+			}
+			//行列をくくるための記号を表示
+			System.out.print("}");
+			//改行する
 			System.out.println();
 
 		}

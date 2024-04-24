@@ -37,13 +37,13 @@ public class Exercise6_13 {
 		}
 
 		//入力された値だけ要素数を持つ配列を生成。aは教本準拠。
-		int[] a = new int[elementNumber];
+		int[] firstArray = new int[elementNumber];
 		//全ての要素を入力させる
 		for (int i = 0; i < elementNumber; i++) {
 			//要素の入力を促す
 			System.out.print("a[" + i + "] = :");
 			//入力を読み込む
-			a[i] = standerdInput.nextInt();
+			firstArray[i] = standerdInput.nextInt();
 		}
 
 		//操作の内容を表示。
@@ -52,13 +52,13 @@ public class Exercise6_13 {
 		//計算に使用する定数を設定
 		final int MINUS_ONE = -1;
 		//配列を逆順にコピーする配列を生成。bは教本準拠。
-		int[] b = new int[elementNumber];
-		//全ての要素に代入して表示する
+		int[] secondArray = new int[elementNumber];
+		//配列の全ての要素に代入して表示する
 		for (int j = 0; j < elementNumber; j++) {
-			//逆順に要素をコピーして代入
-			b[j] = a[elementNumber + MINUS_ONE - j];
+			//要素を逆順に並べて要素に代入する
+			secondArray[j] = firstArray[elementNumber + MINUS_ONE - j];
 			//インデックスと要素の値を表示
-			System.out.println("b[" + j + "] = " + b[j]);
+			System.out.println("b[" + j + "] = " + secondArray[j]);
 		}
 
 	}
