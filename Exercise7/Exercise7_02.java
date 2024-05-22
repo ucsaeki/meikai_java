@@ -46,15 +46,15 @@ public class Exercise7_02 {
 		//Scannerクラスに変数を設定。
 		Scanner standerdInput = new Scanner(System.in);
 
-		//入力を促す
+		//一つ目の整数値の入力を促す
 		System.out.print("1つ目の整数値：");
 		//入力を読み込む
 		int firstNumber = standerdInput.nextInt();
-		//入力を促す
+		//二つ目の整数値の入力を促す
 		System.out.print("2つ目の整数値：");
 		//入力を読み込む
 		int secondNumber = standerdInput.nextInt();
-		//入力を促す
+		//三つ目の整数値の入力を促す
 		System.out.print("3つ目の整数値：");
 		//入力を読み込む
 		int thirdNumber = standerdInput.nextInt();

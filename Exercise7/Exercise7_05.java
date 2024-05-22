@@ -8,9 +8,9 @@ package Exercise7;
 public class Exercise7_05 {
 	/* 
 	 * 関数名  hello
-	 * 概要 あいさつを表示する
+	 * 概要 挨拶を表示する
 	 * 引数 なし
-	 * 返り値 挨拶の表示
+	 * 返り値 なし
 	 * 作成者 Y.Saeki
 	 * 作成日 2024/04/24
 	 */
