@@ -1,4 +1,4 @@
-package Exercise10.Exercise10_04;
+package Exercise12.Exercise12_01;
 
 //Calendarクラスをstaticインポート
 import static java.util.Calendar.*;
@@ -7,11 +7,11 @@ import static java.util.Calendar.*;
 import java.util.GregorianCalendar;
 
 /* 
- * クラス名 Day
- * 概要 日付に関する情報を管理する日付クラス
- * 作成者 Y.Saeki
- * 作成日 2024/05/27
- */
+* クラス名 Day
+* 概要 日付に関する情報を管理する日付クラス
+* 作成者 Y.Saeki
+* 作成日 2024/05/27
+*/
 public class Day {
 	//最後に使用した年を表すクラス変数を設定し、初期値を代入(int)
 	private static int lastYear = 1;

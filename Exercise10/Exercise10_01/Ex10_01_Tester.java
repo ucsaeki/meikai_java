@@ -59,7 +59,7 @@ public class Ex10_01_Tester {
 			//個人のインスタンスに対して発行された識別番号を表示
 			System.out.println(peopleName + "さんの識別番号：" + issueNumber.getId());
 			//最後に与えた識別番号を表示
-			System.out.println("最後に与えた識別番号は：" + issueNumber.getMaxId() );
+			System.out.println("最後に与えた識別番号は：" + issueNumber.getMaxId());
 		}
 
 	}

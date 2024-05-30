@@ -1,4 +1,4 @@
-package Exercise9.Exercise9_03;
+package Exercise12.Exercise12_02;
 
 /* 
  * クラス名 Account
@@ -7,18 +7,22 @@ package Exercise9.Exercise9_03;
  * 作成日 2024/05/20
  */
 public class Account {
-	//口座名義を表すフィールドに名前がないことを表す文字列を設定
-	private String userName = ("No Name");
-	//口座番号を表すフィールドに番号がないことを表す文字列を設定
-	private String userNumber = ("No Number");
+	//口座名義を表すフィールドを設定
+	protected String userName = ("");
+	//口座番号を表すフィールドを設定
+	protected String userNumber = ("");
 	//利用者の預金残高を表すフィールドに0を設定
-	private long userBalance = 0;
-	//利用者の口座開設日を表すフィールドにDayクラスのインスタンスを設定
-	private Day userAccountOpendDate = new Day();
-	
-{
-		
-		System.out.println("明解銀行での口座開設ありがとうございます。");
+	protected long userBalance = 0;
+
+	/* 
+	 * コンストラクタ名 Account
+	 * 概要 引数を指定しない場合、設定された初期値を用いてフィールドを初期化する
+	 * 引数 なし
+	 * 作成者 Y.Saeki
+	 * 作成日 2024/05/28
+	 */
+	public Account() {
+
 	}
 
 	/* 
@@ -61,19 +65,16 @@ public class Account {
 		//預金残高を初期化
 		this.userBalance = userBalance;
 	}
-
 	/* 
 	 * コンストラクタ名  Account
-	 * 概要 口座名義、口座番号、預金残高、口座開設日を入力してコンストラクタを初期化
-	 * 引数 口座名義(String)、口座番号(String)、預金残高(long)、口座開設日(Day)
+	 * 概要 他の口座のインスタンスを使用してコンストラクタを初期化
+	 * 引数 銀行口座(Account)
 	 * 作成者 Y.Saeki
-	 * 作成日 2024/05/20
+	 * 作成日 2024/05/28
 	 */
-	public Account(String userName, String userNo, long userBalance, Day userAccountOpendDate) {
-		//口座名義、口座番号、預金残高を呼び出し
-		this(userName, userNo, userBalance);
-		//口座開設日を初期化
-		this.userAccountOpendDate = userAccountOpendDate;
+	public Account(Account anotherAccount) {
+		//引数のインスタンスの口座名義、口座番号、預金残高をそれぞれ入力して初期化
+		this(anotherAccount.getName(),anotherAccount.getNumber(),anotherAccount.getBalance());
 	}
 
 	/* 
@@ -116,19 +117,6 @@ public class Account {
 	}
 
 	/* 
-	 * 関数名 getAccountOpendDate
-	 * 概要 利用者の口座開設日を返却する
-	 * 引数 なし
-	 * 返り値 利用者の口座開設日を返却(Day)
-	 * 作成者 Y.Saeki
-	 * 作成日 2024/05/20
-	 */
-	public Day getAccountOpendDate() {
-		//利用者の口座開設日を返却
-		return userAccountOpendDate;
-	}
-
-	/* 
 	 * 関数名 depositMoney
 	 * 概要 指定した金額を預ける
 	 * 引数 預ける金額(long)
@@ -153,18 +141,18 @@ public class Account {
 		//口座残高から引き出す金額を減算
 		userBalance -= amountOfMoney;
 	}
+
 	/* 
 	 * 関数名 toString
-	 * 概要  口座名義、口座番号、預金残高、口座開設日を1つの文字列として返却する
+	 * 概要  口座名義、口座番号、預金残高を1つの文字列として返却する
 	 * 引数 なし
-	 * 返り値 口座名義、口座番号、預金残高、口座開設日を表す文字列(String)
+	 * 返り値 口座名義、口座番号、預金残高を表す文字列(String)
 	 * 作成者 Y.Saeki
 	 * 作成日 2024/05/20
 	 */
 	public String toString() {
-		//口座名義、口座番号、預金残高、口座開設日を表す文字列を返却する
-		return String.format("口座名義：%s\n口座番号：%s\n預金残高：%d円\n口座開設日：%s",
-				userName, userNumber, userBalance, userAccountOpendDate);
+		//口座名義、口座番号、預金残高を表す文字列を返却する
+		return String.format("口座名義：%s\n口座番号：%s\n預金残高：%d円", userName, userNumber, userBalance);
 
 	}
 

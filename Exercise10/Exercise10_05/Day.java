@@ -1,4 +1,4 @@
-package Exercise10.Exercise10_04;
+package Exercise10.Exercise10_05;
 
 //Calendarクラスをstaticインポート
 import static java.util.Calendar.*;
@@ -7,11 +7,11 @@ import static java.util.Calendar.*;
 import java.util.GregorianCalendar;
 
 /* 
- * クラス名 Day
- * 概要 日付に関する情報を管理する日付クラス
- * 作成者 Y.Saeki
- * 作成日 2024/05/27
- */
+* クラス名 Day
+* 概要 日付に関する情報を管理する日付クラス
+* 作成者 Y.Saeki
+* 作成日 2024/05/27
+*/
 public class Day {
 	//最後に使用した年を表すクラス変数を設定し、初期値を代入(int)
 	private static int lastYear = 1;
@@ -31,9 +31,9 @@ public class Day {
 	static {
 		//本日の日付を表すインスタンスを作成(GregorianCalendar)
 		GregorianCalendar variableToday = new GregorianCalendar();
-		//本日の年を取得する(int)
+		//
 		todayYear = variableToday.get(YEAR);
-		//要素と実際の月の値のずれを修正するために1加算して求めた、本日の月を取得する(int)
+		//本日の月を取得する(int)
 		todayMonth = variableToday.get(MONTH) + 1;
 		//本日の日を取得する(int)
 		todayDate = variableToday.get(DATE);
@@ -149,7 +149,7 @@ public class Day {
 	 * 作成日 2024/05/16
 	 */
 	public Day(Day anotherDay) {
-		//年、月、日(int)に引数のインスタンスの値を入力して初期化(Day)
+		//年(int)、月(int)、日(int)に引数のインスタンス(Day)の値を入力して初期化
 		this(anotherDay.calendarYear, anotherDay.calendarMonth, anotherDay.calendarDate);
 	}
 
@@ -194,7 +194,7 @@ public class Day {
 
 	/* 
 	 * 関数名 setYear
-	 * 概要 年を表すフィールドに代入する
+	 * 概要 年を表すフィールドに代入する(int)
 	 * 引数 年(int)
 	 * 返り値 なし
 	 * 作成者 Y.Saeki
@@ -207,7 +207,7 @@ public class Day {
 
 	/* 
 	 * 関数名 setMonth
-	 * 概要 月を表すフィールドに代入する
+	 * 概要 月を表すフィールドに代入する(int)
 	 * 引数 月(int)
 	 * 返り値 なし
 	 * 作成者 Y.Saeki
@@ -220,7 +220,7 @@ public class Day {
 
 	/* 
 	 * 関数名 setDay
-	 * 概要 日を表すフィールドに代入する
+	 * 概要 日を表すフィールドに代入する(int)
 	 * 引数 日(int)
 	 * 返り値 なし
 	 * 作成者 Y.Saeki
@@ -233,7 +233,7 @@ public class Day {
 	}
 	/* 
 	 * 関数名 setAllDate
-	 * 概要 年、月、日を表すフィールドに代入する
+	 * 概要 年、月、日を表すフィールドに代入する(int)
 	 * 引数 年、月、日(int)
 	 * 返り値 なし
 	 * 作成者 Y.Saeki
@@ -311,7 +311,7 @@ public class Day {
 	/* 
 	 * 関数名 monthMaximumDays
 	 * 概要 引数の年と月に応じた月の最大日数を求めて返却する
-	 * 引数 年、月(int)
+	 * 引数 年(int)、月(int)
 	 * 返り値 月の最大日数(int)
 	 * 作成者 Y.Saeki
 	 * 作成日 2024/05/17
@@ -335,7 +335,7 @@ public class Day {
 	 * 作成日 2024/05/16
 	 */
 	public boolean isLeap(int variableYear) {
-		//4で割り切れる、かつ100で割り切れないが400で割り切れる閏年の条件に合致する年数だった場合trueを、そうでない場合falseを返却
+		//対象の年が閏年の条件に当てはまる場合true、そうでない場合falseを返却する
 		return (variableYear % 4 == 0 && (variableYear % 100 != 0 || variableYear % 400 == 0) ? true : false);
 	}
 
@@ -348,21 +348,17 @@ public class Day {
 	 * 作成日 2024/05/22
 	 */
 	public int countDateFromThisYearStarting() {
-		//経過した月数から対象の日付が存在する月を除外するための定数を設定
-		final int EXCEPTION_MONTH = 1;
-		//経過した日数から対象の日付が存在する日にちを除外するための定数を設定
-		final int EXCEPTION_DATE = 1;
 		//経過日数を表した変数を設定
 		int totalDays = 0;
 		//インスタンスの日付が存在する月より前の月の最大日数を合計する
-		for (int i = EXCEPTION_MONTH; i < this.getMonth(); i++) {
+		for (int i = 1; i < this.getMonth(); i++) {
 			//経過日数を表した変数に月の日数を加算
 			totalDays += monthMaximumDays(calendarYear, i);
 		}
 		//経過日数の合計に指定された月の経過日数を加算
 		totalDays += this.getDate();
-		//当日分の日付を含まないようにするため、当日の日にちを除外するための定数で減算
-		totalDays -= EXCEPTION_DATE;
+		//当日分の日付を含まないようにするため1日分減算
+		totalDays -= 1;
 		//求めた日数を返却
 		return totalDays;
 	}
@@ -376,20 +372,12 @@ public class Day {
 	 * 作成日 2024/05/22
 	 */
 	public int countDateUntilNextYear(Day targetDay) {
-		//通常の一年の日数を表す定数を設定
-		final int YEAR_DATE_NUMBER = 365;
-		//閏年の場合の一年の日数を表す定数を設定
-		final int LEAP_YEAR_DATE_NUMBER = 366;
-		//経過した日数から対象の日付が存在する日にちを除外するための定数を設定
-		final int EXCEPTION_DATE = 1;
-
 		//対象の年の最大日数から、対象の日までの経過日数と当日分を含まないようにするための1日分を引いた値を返却
-		return ((isLeap(this.getYear()) ? LEAP_YEAR_DATE_NUMBER : YEAR_DATE_NUMBER)
-				- targetDay.countDateFromThisYearStarting() - EXCEPTION_DATE);
+		return ((isLeap(this.getYear()) ? 366 : 365) - targetDay.countDateFromThisYearStarting() - 1);
 	}
 
 	/* 
-	 * 関数名 daysRelation
+	 * 関数名 main
 	 * 概要 インスタンスが持つ日付と基準の日付の前後関係を表示する
 	 * 引数 インスタンスの日付を表す文字列(String)、基準の日付(Day)、基準の日付の内容を表す文字列(String)
 	 * 返り値 なし
