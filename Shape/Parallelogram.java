@@ -6,13 +6,13 @@ package Shape;
  * 作成者 Y.Saeki
  * 作成日 2024/05/30
  */
-public class Parallelogram extends Shape implements SymbolPrintCount {
+public class Parallelogram extends Shape implements SymbolPrintCount,Plane2D {
 	//平行四辺形の底辺を表すフィールドを宣言
 	private int bottomLength = 0;
 	//平行四辺形の高さを表すフィールドを宣言
 	private int heightLength = 0;
 	//表示した記号の個数を表す静的フィールドを宣言
-	private static int symbolCounet = 0;
+	private int symbolCounet = 0;
 
 	/* 
 	 * コンストラクタ名 Rectangle
@@ -54,6 +54,19 @@ public class Parallelogram extends Shape implements SymbolPrintCount {
 		//表示した記号の個数を返却する
 		return symbolCounet;
 	}
+	
+	/* 
+	 * 関数名 getArea
+	 * 概要 平行四辺形の面積を取得する
+	 * 引数 なし
+	 * 返り値 平行四辺形の面積(int)
+	 * 作成者 Y.Saeki
+	 * 作成日 2024/05/31
+	 */
+	public int getArea() {
+		//平行四辺形の面積を返却
+		return bottomLength * heightLength;
+	}
 
 	/* 
 	 * 関数名 drawShape
@@ -84,6 +97,8 @@ public class Parallelogram extends Shape implements SymbolPrintCount {
 		}
 		//使用した記号の数を表示
 		System.out.println("使用した記号の数は" + symbolCounet + "個です。");
+		//図形の面積を表示
+		System.out.println("面積は" + getCountSymbol() + "です。");
 	}
 
 }

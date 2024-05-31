@@ -46,12 +46,10 @@ public class ComputerPlayer extends Player{
 	public void setHand() {
 		//じゃんけんの手の個数を表す定数を設定
 		final int HAND_NUMBER = 3;
-		//生成される乱数の最小値を表す定数を設定
-		final int MINIMUM_RANDOM = 1;
 		//ランダムな手を表すインスタンスを生成(Random)
 		Random randomHand = new Random();
 		//コンピュータの手を表すフィールドにランダムに生成された手を表す値を代入
-		this.variableHand = randomHand.nextInt(HAND_NUMBER) + MINIMUM_RANDOM;
+		this.variableHand = randomHand.nextInt(HAND_NUMBER);
 		//コンピュータの手を表す文字列を表すフィールドを、生成された手に対応する文字列で初期化
 		this.handChar = Player.handCharStrage[variableHand];
 	}

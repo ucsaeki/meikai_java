@@ -6,7 +6,7 @@ package Shape;
  * 作成者 Y.Saeki
  * 作成日 2024/05/29
  */
-public class Rectangle extends Shape implements SymbolPrintCount{
+public class Rectangle extends Shape implements SymbolPrintCount, Plane2D {
 	//長方形の幅を表すフィールドを宣言
 	private int widthLength;
 	//長方形の高さを表すフィールドを宣言
@@ -41,6 +41,7 @@ public class Rectangle extends Shape implements SymbolPrintCount{
 		//長方形の情報を表す文字列を返却
 		return "Rectangle(width:" + widthLength + ", height:" + heightLength + ")";
 	}
+
 	/* 
 	 * 関数名 getCountSymbol
 	 * 概要 記号を表示した個数を取得する
@@ -53,6 +54,20 @@ public class Rectangle extends Shape implements SymbolPrintCount{
 		//記号を表示した個数を返却する
 		return symbolCounet;
 	}
+
+	/* 
+	 * 関数名 getArea
+	 * 概要 長方形の面積を取得する
+	 * 引数 なし
+	 * 返り値 長方形の面積(int)
+	 * 作成者 Y.Saeki
+	 * 作成日 2024/05/31
+	 */
+	public int getArea() {
+		//長方形の面積を返却
+		return widthLength * heightLength;
+	}
+
 	/* 
 	 * 関数名 drawShape
 	 * 概要 長方形を描写し、使用した記号の個数を表示する
@@ -76,6 +91,7 @@ public class Rectangle extends Shape implements SymbolPrintCount{
 		}
 		//使用した記号の数を表示
 		System.out.println("使用した記号の数は" + symbolCounet + "個です。");
+		//図形の面積を表示
+		System.out.println("面積は" + getCountSymbol() + "です。");
 	}
 }
-

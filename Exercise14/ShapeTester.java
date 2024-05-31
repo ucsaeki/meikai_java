@@ -9,6 +9,8 @@ import Shape.HorizontalLine;
 import Shape.LeftUnderRIghtAngle;
 //LeftUpperRightAngleクラスをインポート
 import Shape.LeftUpperRightAngle;
+//Parallelogramクラスをインポート
+import Shape.Parallelogram;
 //Pointクラスをインポート
 import Shape.Point;
 //Rectangleクラスをインポート
@@ -41,6 +43,8 @@ public class ShapeTester {
 	static final int CHOSE_RECTANGLE = 4;
 	//直角二等辺三角形を選択したことを表す定数を設定
 	static final int CHOSE_ISOSCELES_RIGHT_TRIANGLE = 5;
+	//平行四辺形を選択したことを表す定数を設定
+	static final int CHOSE_PARALLELOGRAM = 6;
 
 	/* 
 	 * 関数名 inputIntegralNumber
@@ -72,7 +76,7 @@ public class ShapeTester {
 	 * 関数名 choseInRange
 	 * 概要 指定された範囲内の値を入力させる
 	 * 引数 範囲の下限、上限(int)
-	 * 返り値 なし
+	 * 返り値 範囲内の値(int)
 	 * 作成者 Y.Saeki
 	 * 作成日 2024/05/29
 	 */
@@ -87,6 +91,7 @@ public class ShapeTester {
 			//選択された図形を表す変数に入力を読み込む
 			chooseNumber = standardInput.nextInt();
 		}
+		//範囲内の値を返却する
 		return chooseNumber;
 	}
 
@@ -109,13 +114,13 @@ public class ShapeTester {
 		//選択範囲の最小値を表す定数を設定
 		final int RANGE_MINIMUM = 1;
 		//選択範囲の最大値を表す定数を設定
-		final int RANGE_MAXIMUM = 5;
+		final int RANGE_MAXIMUM = 6;
 
 		//指定された個数分の図形を選択させる
 		for (int i = 0; i < shapeNumber; i++) {
 
 			//図形の選択を促す文章を表示(String)
-			System.out.print((i + FILL_INDEX) + "番の図形の種類(1…点/2…水平直線/3…垂直直線/4…長方形/5…直角二等辺三角形)：");
+			System.out.print((i + FILL_INDEX) + "番の図形の種類(1…点/2…水平直線/3…垂直直線/4…長方形/5…直角二等辺三角形/6…平行四辺形)：");
 			//選択された図形を表す変数を設定し、選択肢の範囲内の値で図形を選択させる
 			int choosedShape = choseInRange(RANGE_MINIMUM, RANGE_MAXIMUM);
 
@@ -193,6 +198,16 @@ public class ShapeTester {
 					//分岐を脱出する
 					break;
 				}
+				//分岐を脱出する
+				break;	
+				
+				//平行四辺形が選ばれた場合
+			case CHOSE_PARALLELOGRAM:
+				//幅と高さを入力した長方形を表すインスタンスを配列に格納
+				holdingShapeArray[i] = new Parallelogram(inputIntegralNumber("平行四辺形の底辺："),
+						inputIntegralNumber("平行四辺形の高さ："));
+				//分岐を脱出する
+				break;
 			}
 		}
 		//配列に格納された全ての図形を表示する
@@ -202,8 +217,6 @@ public class ShapeTester {
 			//改行する
 			System.out.println();
 		}
-		
-		
 
 	}
 

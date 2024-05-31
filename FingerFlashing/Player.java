@@ -8,11 +8,11 @@ package FingerFlashing;
  */
 public abstract class Player {
 	//グーの手を表す静的フィールドを宣言
-	protected static final int ROCK_HAND = 1;
+	protected static final int ROCK_HAND = 0;
 	//チョキの手を表す静的フィールドを宣言
-	protected static final int SCISSORS_HAND = 2;
+	protected static final int SCISSORS_HAND = 1;
 	//パーの手を表す静的フィールドを宣言
-	protected static final int PAPER_HAND = 3;
+	protected static final int PAPER_HAND = 2;
 	//グーの文字列を表す静的フィールドを宣言
 	protected static final String CHAR_ROCK = "グー";
 	//グーの文字列を表す静的フィールドを宣言
@@ -22,7 +22,7 @@ public abstract class Player {
 
 	//じゃんけんの手を表す文字列を格納した配列を生成(String) 
 	//選択肢と配列の要素の値をそろえるため、先頭の要素にnullを代入
-	protected static final String[] handCharStrage = new String[] { null, CHAR_ROCK, CHAR_SCISSORS, CHAR_PAPER };
+	protected static final String[] handCharStrage = new String[] { CHAR_ROCK, CHAR_SCISSORS, CHAR_PAPER };
 
 	//じゃんけんの手を表すフィールドを宣言
 	protected int variableHand = 0;

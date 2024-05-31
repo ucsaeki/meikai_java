@@ -49,11 +49,11 @@ public class HumanPlayer extends Player {
 	@Override
 	public void setHand() {
 		//選択範囲の最小値を表す定数を設定
-		final int RANGE_MINIMUM = 1;
+		final int RANGE_MINIMUM = 0;
 		//選択範囲の最大値を表す定数を設定
-		final int RANGE_MAXIMUM = 3;
+		final int RANGE_MAXIMUM = 2;
 		//図形の選択を促す文章を表示(String)
-		System.out.print("手を入力してください(1…グー/2…チョキ/3…パー)：");
+		System.out.print("手を入力してください(0…グー/1…チョキ/2…パー)：");
 		//選択された図形を表す変数を設定し、選択肢の範囲内の値で図形を選択させる
 		int choosedHand = (choseInRange(RANGE_MINIMUM, RANGE_MAXIMUM));
 		//人間の手を表すフィールドに引数を代入
@@ -73,7 +73,7 @@ public class HumanPlayer extends Player {
 	@Override
 	public String toString() {
 		//人間の手を表す文字列を表示
-		return String.format("選んだ手は、%sです。", handChar);
+		return String.format("あなた選んだ手は、%sです。", handChar);
 	}
 
 	/* 
