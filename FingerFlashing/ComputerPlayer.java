@@ -1,4 +1,5 @@
 package FingerFlashing;
+
 //Randomクラスをインポート
 import java.util.Random;
 
@@ -8,7 +9,10 @@ import java.util.Random;
  * 作成者 Y.Saeki
  * 作成日 2024/05/30
  */
-public class ComputerPlayer extends Player{
+public class ComputerPlayer extends Player {
+
+	//コンピュータの番号を表す静的フィールドを宣言
+	private static int computerCounter = 0;
 	/* 
 	 * コンストラクタ名 ComputerPlayer
 	 * 概要 コンピュータの手を表すフィールドを初期化する
@@ -16,6 +20,7 @@ public class ComputerPlayer extends Player{
 	 * 作成者 Y.Saeki
 	 * 作成日 2024/05/30
 	 */
+
 	public ComputerPlayer() {
 		//コンピュータの手と手の文字列を表すフィールドをランダムな手で初期化
 		setHand();
@@ -34,6 +39,7 @@ public class ComputerPlayer extends Player{
 		//コンピュータの手を表すフィールドを返却
 		return variableHand;
 	}
+
 	/* 
 	 * 関数名 setHand
 	 * 概要 コンピュータの手と手を表す文字列をフィールドに代入する
@@ -52,7 +58,10 @@ public class ComputerPlayer extends Player{
 		this.variableHand = randomHand.nextInt(HAND_NUMBER);
 		//コンピュータの手を表す文字列を表すフィールドを、生成された手に対応する文字列で初期化
 		this.handChar = Player.handCharStrage[variableHand];
+		//コンピュータの番号を表すフィールドに1加算
+		computerCounter++;
 	}
+
 	/* 
 	 * 関数名 toString
 	 * 概要 選択されたコンピュータの手を表す文字列を表示する
@@ -64,8 +73,7 @@ public class ComputerPlayer extends Player{
 	@Override
 	public String toString() {
 		//コンピュータの手を表す文字列を表示
-		return String.format("コンピュータの手は、%sです。", handChar);
+		return String.format("コンピュータ%dの手は、%sです。", computerCounter, handChar);
 	}
-
 
 }

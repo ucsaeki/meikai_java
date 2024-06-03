@@ -1,4 +1,5 @@
 package FingerFlashing;
+
 //Scannerクラスをインポート
 import java.util.Scanner;
 
@@ -73,7 +74,7 @@ public class HumanPlayer extends Player {
 	@Override
 	public String toString() {
 		//人間の手を表す文字列を表示
-		return String.format("あなた選んだ手は、%sです。", handChar);
+		return String.format("あなたが選んだ手は、%sです。", handChar);
 	}
 
 	/* 
