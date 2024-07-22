@@ -18,7 +18,7 @@ public class Exercise1_3 {
 	public static void main(String[] args) {
 		// TODO 自動生成されたメソッド・スタブ
 		//佐伯　友詞を縦に表示させるため、\nを使用して改行。
-		System.out.println("佐\n伯\n　\n友\n詞");
+		System.out.println("佐\n伯\n\n友\n詞");
 	}
 
 }
